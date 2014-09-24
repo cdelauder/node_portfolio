@@ -12,4 +12,8 @@ server.get('/stylesheet.css', function (req, res) {
   res.sendFile(__dirname + '/public/css/stylesheet.css')
 })
 
+server.get('/:image', function (req, res) {
+  res.sendFile(__dirname + '/public/images/' + req.params.image)
+})
+
 server.listen(3000)
