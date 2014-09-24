@@ -1,0 +1,230 @@
+html {
+  font-family: 'Lato', sans-serif;
+  background-color: #EDDAB9;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  height: 100;
+  position: relative;
+  bottom: 0;
+}
+
+.page {
+  margin: -1% -1% -2% -1%;
+  height: 100%;
+  position: relative;
+}
+
+a {
+  color: #51088f;
+  text-decoration: none;
+  font-weight: lighter;
+}
+
+.chris {
+  font-weight: lighter;
+  display: inline-block;
+  margin-left: 20%;
+  width: 30%;
+  font-size: 2.2em;
+}
+
+.main-content {
+  margin: 0 20% 0 20%;
+  min-height: 100%;
+  display: block;
+  clear: both;
+}
+
+.chris-title {
+  display: inline-block;
+  margin-left: 10%;
+  margin-right: 19%;
+  width: 20%;
+  font-size: 1.1em;
+  text-align: right;
+}
+
+.blurb {
+  text-align: justify;
+  font-weight: lighter;
+}
+
+.content-links {
+  margin-left: 20%;
+  border-bottom: 1px solid black;
+  margin-right: 20%;
+}
+
+.portfolio-link {
+  margin-left: 10%;
+}
+
+.contact-link {
+  margin-left: 10%;
+}
+
+.resume-link {
+  margin-left: 10%;
+}
+
+.project {
+  width: 100%;
+  display: inline-block;
+}
+
+.project-pic {
+  max-width: 45%;
+  height: auto;
+  float: right;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.project-name {
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.project-description {
+  width: 50%;
+  font-weight: lighter;
+  font-size: .8em; 
+  text-align: justify;
+}
+
+.project-bullets {
+  width: 50%;
+  font-weight: lighter;
+  font-size: .8em; 
+  text-align: justify;
+}
+
+.project-source {
+  font-size: .8em;
+  display: inline;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.fa {
+  display: inline-block;
+  margin-right: .5em;
+}
+
+.contact-me-link {
+  font-weight: bolder;
+  text-decoration: none;
+  margin-top: 1em;
+  display: inline;
+  font-size: 1em;
+}
+
+.nibbler-pic {
+  padding-top: 1em;
+  max-width: 50%;
+  float: right;
+  display: block;
+}
+
+.email-link {
+  font-weight: bolder;
+  text-decoration: none;
+  display: inline;
+}
+
+.links {
+  padding-top: 1em;
+  width: 50%;
+  float:left;
+}
+
+.chris-pic {
+  padding-top: 1em;
+  max-width: 60%;
+  display: inline-block;
+}
+
+.resume {
+  font-weight: bolder;
+  display: block;
+  text-decoration: none;
+  margin-top: 1em;
+}
+
+.inline-pdf {
+  width: 100%;
+  height: 800px;
+  border: none;
+}
+
+.inline-bird {
+  margin-right: 0;
+}
+
+.email-form {
+  margin-top: 1em;
+  width: 330px;
+  display: inline;
+  z-index: 1000;
+  background-color: #EDDAB9;
+  position: absolute;
+  font-weight: lighter;  
+  padding: 1%; 
+  border-radius: 2.5%;
+}
+
+.email-form #body {
+  font-weight: lighter;
+  float: right;
+  border: 1px inset;
+}
+
+.email-textfield {
+  display: inline;
+}
+
+.email-form #submit {
+  margin-top: 1em;
+  float: right;
+  display: inline;
+}
+
+.shadow {
+  background-color: black;
+  opacity: .8;
+  z-index: 500;
+  position: absolute;
+  top:0; 
+  right:0;
+  bottom:0; 
+  left:0;
+}
+
+.close {
+  font-weight: lighter;
+  float: right;
+  display: inline;
+  padding: 1%;
+}
+
+.footer {
+  margin-top: 1em;
+  padding-top: 1em;
+  width: 100%;
+  bottom: 0;
+  height: 5%;
+  text-align: center;
+  clear: both;
+}
+
+.footer-link {
+  display: inline-block;
+}
+
+.portfolio-source {
+  font-weight: bolder;
+  margin-right: .5em;
+}

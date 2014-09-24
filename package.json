@@ -1,0 +1,19 @@
+{
+  "name": "node_portfolio",
+  "version": "0.0.0",
+  "description": "node version of my portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdelauder/node_portfolio.git"
+  },
+  "author": "Chris DeLauder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdelauder/node_portfolio/issues"
+  },
+  "homepage": "https://github.com/cdelauder/node_portfolio"
+}
