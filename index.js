@@ -3,6 +3,7 @@ var server = express()
 var exphbs = require('express-handlebars')
 server.engine('handlebars', exphbs({defaultLayout: 'layout'}));
 server.set('view engine', 'handlebars');
+var qs = require('querystring')
 
 server.get('/', function (req, res) {
   res.render('index')
@@ -21,8 +22,6 @@ server.get('/home', function (req, res) {
 })
 
 server.get('/email', function (req, res) {
-  var gmailPW = require('/.env')
-  console.log($PW)
   res.render('email')
 })
 
@@ -47,14 +46,35 @@ server.get('/:image', function (req, res) {
 })
 
 server.post('/email', function (req, res) {
-  var mailer = require('nodemailer')
-  var transporter = nodemailer.createTransport({
-    service: 'Gmail',
-    auth: {
-      user: 'cdelauder@gmail.com',
-      pass: $PW
+  req.on('data', function (chunk) {
+    var body = chunk.toString()
+    var form = qs.parse(body)
+    makeEmail(form)
+  })
+  function makeEmail(form) {
+    var mailer = require('nodemailer')
+    var config = require('./config.json')
+    var transporter = mailer.createTransport({
+      service: 'Gmail',
+      auth: config
+    });
+    var mailOptions = {
+      to: config.user,
+      replyTo: form['email']
+      from: form['email'],
+      subject: form['subject'],
+      body: form['body']
     }
-  });
+    transporter.sendMail(mailOptions, function(error, info){
+    if(error){
+        console.log(error);
+        res.render('contact')
+    }else{
+        res.render('contact')
+    }
+});
+  }
 })
+
 
 server.listen(3000)
