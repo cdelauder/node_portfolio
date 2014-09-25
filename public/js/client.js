@@ -15,6 +15,7 @@ function gethtml (e) {
 
 function addToPage (e) {
   $('.main-content').empty().append(e)
+  bindListeners()
 }
 
 function getOverlayContent (e) {
@@ -63,4 +64,5 @@ var toggleEmailForm = function() {
   $('.email-form').remove()
   $('.email').one('click', emailSend)
   $('.email-link').one('click', getOverlayContent)
+  bindListeners()
 }

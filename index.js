@@ -10,23 +10,23 @@ server.get('/', function (req, res) {
 })
 
 server.get('/portfolio', function (req, res) {
-  res.render('portfolio')
+  res.render('portfolio', {layout: false})
 })
 
 server.get('/contact', function (req, res) {
-  res.render('contact')
+  res.render('contact', {layout: false})
 })
 
 server.get('/home', function (req, res) {
-  res.render('home')
+  res.render('home', {layout: false})
 })
 
 server.get('/email', function (req, res) {
-  res.render('email')
+  res.render('email', {layout: false})
 })
 
 server.get('/resume', function (req, res) {
-  res.render('resume')
+  res.render('resume', {layout: false})
 })
 
 server.get('/stylesheet.css', function (req, res) {
@@ -34,7 +34,9 @@ server.get('/stylesheet.css', function (req, res) {
 })
 
 server.get('/chrisdelauder.pdf', function (req, res) {
-  res.sendFile(__dirname + '/public/files/chrisdelauder.pdf')
+  res.setHeader('Content-disposition', 'attachment')
+  res.setHeader('Content-type', 'pdf')
+  res.download(__dirname + '/public/files/chrisdelauder.pdf')
 })
 
 server.get('/client.js', function (req, res) {
@@ -60,7 +62,7 @@ server.post('/email', function (req, res) {
     });
     var mailOptions = {
       to: config.user,
-      replyTo: form['email']
+      replyTo: form['email'],
       from: form['email'],
       subject: form['subject'],
       body: form['body']
