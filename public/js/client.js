@@ -55,8 +55,10 @@ var emailError = function() {
   $('.email-status').text('Error, please try again')
 }
 
-var cancel = function() {
-  toggleEmailForm()
+var cancel = function(e) {
+  $('.shadow').remove()
+  $('.email-form').remove()
+  gethtml(e)
 }
 
 var toggleEmailForm = function() {

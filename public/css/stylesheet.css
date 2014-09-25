@@ -33,6 +33,7 @@ a {
 
 .main-content {
   margin: 0 20% 0 20%;
+  max-width: 80%;
   min-height: 100%;
   display: block;
   clear: both;
