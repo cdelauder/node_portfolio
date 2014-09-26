@@ -30,7 +30,7 @@ function getOverlayContent (e) {
 var overlayContent = function(e) {
   $('html').append('<div class="shadow"></div>')
   $('.main-content').prepend(e)
-  $('.email-textfield').one('click', emailSend)
+  $('#submit').one('click', emailSend)
   $('.close').one('click', cancel)
 }
 

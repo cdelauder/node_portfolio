@@ -28,6 +28,7 @@ a {
   display: inline-block;
   margin-left: 20%;
   width: 30%;
+  padding-left:0;
   font-size: 2.2em;
 }
 
@@ -172,7 +173,9 @@ a {
 .email-form {
   margin-top: 1em;
   width: 330px;
+  height: 330px;
   display: inline;
+  border: 2px solid red;
   z-index: 1000;
   background-color: #EDDAB9;
   position: absolute;
@@ -183,8 +186,8 @@ a {
 
 .email-form #body {
   font-weight: lighter;
-  float: right;
-  border: 1px inset;
+  float: left;
+  height: auto;
 }
 
 .email-textfield {
