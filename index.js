@@ -58,7 +58,7 @@ server.post('/email', function (req, res) {
     var mailer = require('nodemailer')
     var config
     console.log(process.env.HEROKU === 'true')
-    if (process.env.HEROKU) {
+    if (process.env.HEROKU === 'true') {
       console.log(process.env.HEROKU)
       config = {
         'user': process.env.USER,
