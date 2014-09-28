@@ -59,8 +59,6 @@ server.post('/email', function (req, res) {
   })
   function makeEmail(form) {
     var mailer = require('nodemailer')
-
-
     var config = {
       'user': process.env.USER,
       'pass': process.env.PATH

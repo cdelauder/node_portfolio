@@ -173,9 +173,7 @@ a {
 .email-form {
   margin-top: 1em;
   width: 330px;
-  height: 330px;
   display: inline;
-  border: 2px solid red;
   z-index: 1000;
   background-color: #EDDAB9;
   position: absolute;
@@ -197,7 +195,7 @@ a {
 .email-form #submit {
   margin-top: 1em;
   float: right;
-  display: inline;
+  display: inline-block;
 }
 
 .shadow {
