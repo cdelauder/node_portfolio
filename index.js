@@ -55,6 +55,7 @@ server.post('/email', function (req, res) {
     makeEmail(form)
   })
   function makeEmail(form) {
+    console.log('anything')
     var mailer = require('nodemailer')
     var config = require('./config.json')
     var transporter = mailer.createTransport({
@@ -66,13 +67,15 @@ server.post('/email', function (req, res) {
       replyTo: form['email'],
       from: form['email'],
       subject: form['subject'],
-      body: form['body']
+      text: form['email'] + '\n' + form['body']
     }
     transporter.sendMail(mailOptions, function(error, info){
+      console.log('something')
     if(error){
         console.log(error);
-        res.render('contact')
+        res.status(500)
     }else{
+      console.log(info)
         res.render('contact')
     }
 });

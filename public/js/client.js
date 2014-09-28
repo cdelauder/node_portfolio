@@ -30,15 +30,22 @@ function getOverlayContent (e) {
 var overlayContent = function(e) {
   $('html').append('<div class="shadow"></div>')
   $('.main-content').prepend(e)
-  $('#submit').one('click', emailSend)
+  $('.email-textfield').one('submit', emailSend)
   $('.close').one('click', cancel)
 }
 
 var emailSend = function(e) {
   e.preventDefault()
+  debugger
+  var formData = {
+    'email': $('.email-field').val(),
+    'subject': $('.subject').val(),
+    'body': $('#body').val() 
+  }
   var ajax = $.ajax({
-    url: e.target.href
-
+    url: e.target.action,
+    method: 'post',
+    data: formData
   })
   $('.email-textfield').append('Sending...')
   ajax.done(emailSent)
