@@ -34,10 +34,10 @@ server.get('/stylesheet.css', function (req, res) {
 })
 
 server.get('/chrisdelauder.pdf', function (req, res) {
-  // res.setHeader('Content-disposition', 'attachment')
-  // res.setHeader('Content-type', 'pdf')
-  // res.download(__dirname + '/public/files/chrisdelauder.pdf')
-  res.sendFile(__dirname + '/public/files/chrisdelauder.pdf')
+  res.setHeader('Content-disposition', 'attachment')
+  res.setHeader('Content-type', 'pdf')
+  res.download(__dirname + '/public/files/chrisdelauder.pdf')
+  // res.sendFile(__dirname + '/public/files/chrisdelauder.pdf')
 })
 
 server.get('/client.js', function (req, res) {
