@@ -36,7 +36,6 @@ var overlayContent = function(e) {
 
 var emailSend = function(e) {
   e.preventDefault()
-  debugger
   var formData = {
     'email': $('.email-field').val(),
     'subject': $('.subject').val(),

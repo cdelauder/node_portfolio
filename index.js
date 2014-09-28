@@ -56,7 +56,15 @@ server.post('/email', function (req, res) {
   })
   function makeEmail(form) {
     var mailer = require('nodemailer')
-    var config = require('./config.json')
+    var config
+    if (process.env.heroku) {
+      config = {
+        'user': process.env.user,
+        'pass': process.env.path
+      }
+    } else {
+      config = require('./config.json')
+    }
     var transporter = mailer.createTransport({
       service: 'Gmail',
       auth: config
