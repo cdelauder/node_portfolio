@@ -57,12 +57,12 @@ server.post('/email', function (req, res) {
   function makeEmail(form) {
     var mailer = require('nodemailer')
     var config
-    process.stdout(process.env.heroku)
-    if (process.env.heroku) {
-      process.stdout(process.env.heroku)
+    console.log(process.env.HEROKU === 'true')
+    if (process.env.HEROKU) {
+      console.log(process.env.HEROKU)
       config = {
-        'user': process.env.user,
-        'pass': process.env.path
+        'user': process.env.USER,
+        'pass': process.env.PATH
       }
     } else {
       config = require('./config.json')
