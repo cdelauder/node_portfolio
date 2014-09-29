@@ -63,7 +63,7 @@ server.post('/email', function (req, res) {
       'user': process.env.USER,
       'pass': process.env.PATH
     }
-  
+    console.log(config)
     var transporter = mailer.createTransport({
       service: 'Gmail',
       auth: config
