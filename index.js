@@ -61,7 +61,7 @@ server.post('/email', function (req, res) {
     var mailer = require('nodemailer')
     var config = {
       'user': process.env.USER,
-      'pass': process.env.PATH
+      'pass': process.env.PASS
     }
     console.log(config)
     var transporter = mailer.createTransport({
